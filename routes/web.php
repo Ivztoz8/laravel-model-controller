@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Rotta: localhost:8080
+Route::get('/', 'MovieController@index')-> name('index');
+
+//Rotta:localhost8080/book/id
+Route::get('/movie/{id}', 'MovieController@show' ) -> name('movie');
